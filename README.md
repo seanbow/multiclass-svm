@@ -12,7 +12,7 @@ All SVM implementations are based on this solver.
 An example of training and testing an SVM on a dataset:
 
     % Model type is one of "OVA", "AVA", "LLW", "CS", "SC", "SH"
-    svm = get_model("LLW", K);  % K = number of classes
+    svm = get_model("SH", K);  % K = number of classes
     svm.hyperparams.C = 5;
     svm.kernel = "rbf";
     svm.hyperparams.gamma = 0.1;
@@ -26,6 +26,8 @@ Also included are functions for performing crossvalidation and hyperparameter op
 See the script file `SCRIPT_mnist.m` for an example of training hyperparameters and then training a full model and 
 testing its accuracy on test data using the MNIST handwriting recognition dataset.
 
+
+Training the LLW-SVM requires the [CVX Optimization Library](http://cvxr.com/cvx/) in certain cases; all other models are self-contained.
 
 
 [1] Y. Lee, Y. Lin, and G. Wahba. Multicategory support vector machines. Journal of the American
