@@ -9,6 +9,8 @@ In addition, we provide an extremely efficient quadratic program solver (`solve_
 linear inequality and equality constraints, and upper and lower bound constraints.
 All SVM implementations are based on this solver.
 
+In training an all-vs-all (AVA) SVM classifier on the full MNIST handwriting recognition dataset, our implementation matched the test accuracy of Scikit-Learn's python implementation based on LIBSVM (98.5%) while training in just 23% of the time (3.8 minutes vs 16.75 minutes on a laptop with an Intel i7).
+
 An example of training and testing an SVM on a dataset:
 
     % Model type is one of "OVA", "AVA", "LLW", "CS", "SC", "SH"
