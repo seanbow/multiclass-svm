@@ -19,6 +19,8 @@ An example of training and testing an SVM on a dataset:
     svm.kernel = "rbf";
     svm.hyperparams.gamma = 0.1;
 
+    % Xtrain is an N by d matrix of N d-dimension feature vectors
+    % Ytrain is a 1 by N vector of class labels in {1, 2, ..., K}
     svm = train_model(svm, Xtrain, Ytrain);
 
     acc = test_model(svm, Xtest, Ytest);
